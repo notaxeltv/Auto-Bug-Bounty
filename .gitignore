@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# File di configurazione REALI (non i template .example)
+config/targets.yaml
+config/settings.yaml
+
+data/
+*.egg-info/
+.pytest_cache/

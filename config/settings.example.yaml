@@ -1,0 +1,33 @@
+# Template di impostazioni globali per autobb.
+# Copia questo file in "settings.yaml" (o usa "autobb init") ed editalo
+# secondo le tue necessita'. "settings.yaml" e' incluso in .gitignore.
+
+notifications:
+  # URL del webhook (Slack, Discord o generico) su cui inviare le notifiche
+  # delle novita' rilevate. Lascia vuoto per disabilitare le notifiche.
+  webhook_url: ""
+
+tools:
+  # Nomi (o path assoluti) dei binari dei tool esterni usati per recon/scan.
+  subfinder: "subfinder"
+  httpx: "httpx"
+  naabu: "naabu"
+  nuclei: "nuclei"
+
+nuclei:
+  severity: "low,medium,high,critical"
+  rate_limit: 150
+  extra_args: []
+
+naabu:
+  # Port scan opzionale: disattivato di default. Attivalo solo se il
+  # programma/scope autorizza esplicitamente il port scanning.
+  enabled: false
+  top_ports: 100
+
+watch:
+  # Intervallo di default (in secondi) tra i cicli in modalita' "watch".
+  default_interval_seconds: 3600
+
+paths:
+  data_dir: "data"
