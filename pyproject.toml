@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autobb"
+version = "0.1.0"
+description = "Framework di automazione ETICA per bug bounty (recon + vulnerability scanning), con guardrail legali espliciti."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "click>=8.1",
+    "PyYAML>=6.0",
+    "requests>=2.31",
+]
+
+[project.scripts]
+autobb = "autobb.cli:main"
+
+[tool.setuptools]
+packages = ["autobb"]

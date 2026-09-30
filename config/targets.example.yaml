@@ -1,0 +1,25 @@
+# Template di configurazione dei target di bug bounty.
+#
+# IMPORTANTE: imposta "authorized: true" SOLO per domini/programmi per cui
+# hai un'autorizzazione esplicita e scritta (es. un programma di bug
+# bounty pubblico che elenca questi domini nello scope, o un contratto di
+# pentest firmato). Scansionare target non autorizzati e' illegale e
+# viola i termini di uso etico di questo progetto.
+#
+# Copia questo file in "targets.yaml" (o usa "autobb init") ed editalo
+# con i tuoi target reali. "targets.yaml" e' incluso in .gitignore e non
+# deve mai essere committato con dati reali.
+
+targets:
+  - name: example-corp
+    domains:
+      - example-corp.com
+    authorized: true
+    program_url: "https://bugbounty.example-corp.com"
+    scope_notes: "In scope: *.example-corp.com. Out of scope: staging interno, terze parti."
+    rate_limit_rps: 5
+    severities:
+      - low
+      - medium
+      - high
+      - critical
